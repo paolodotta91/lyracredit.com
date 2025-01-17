@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegCap Trade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #000000;
+            color: white;
+            line-height: 1;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .main-title {
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 900;
+            line-height: 0.9;
+            margin-bottom: 4rem;
+            color: #fff;
+            text-transform: uppercase;
+            animation: fadeInUp 1.2s ease-out;
+            letter-spacing: -0.02em;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+            animation: fadeInUp 1.4s ease-out;
+        }
+
+        .feature {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+            line-height: 1.4;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+
+        .feature:hover {
+            background: rgba(236, 72, 153, 0.05);
+            border-color: rgba(236, 72, 153, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            padding: 1.25rem 2.5rem;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            letter-spacing: 0.02em;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+            animation: fadeInUp 1.6s ease-out;
+            border: 1px solid rgba(236, 72, 153, 0.3);
+            border-radius: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #DB2777, #BE185D);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .cta:hover {
+            border-color: transparent;
+        }
+
+        .cta:hover::before {
+            opacity: 1;
+        }
+
+        .artistic-element {
+            position: fixed;
+            right: -10%;
+            top: 50%;
+            width: 800px;
+            height: 800px;
+            background: linear-gradient(45deg, #DB2777, #BE185D);
+            border-radius: 50%;
+            filter: blur(150px);
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1.5rem;
+            }
+            .features {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .feature {
+                font-size: 1.2rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="artistic-element"></div>
+        <h1 class="main-title">
+            We are building<br>
+            the simplest<br>
+            Reg Cap Trade<br>
+            for banks.
+        </h1>
+        
+        <div class="features">
+            <div class="feature">Standardized solution deployable across all loan types</div>
+            <div class="feature">Immediate liquidity with perfect capital relief</div>
+        </div>
+
+        <a href="mailto:adil@lyracredit.com,paolo@lyracredit.com" class="cta">Get in touch</a>
+    </div>
+</body>
+</html>
